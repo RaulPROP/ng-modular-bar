@@ -1,0 +1,26 @@
+<div class="__mb-bar-wrapper" [class.__mb-can-hover]="canBeHovered">
+
+	<div
+		class="__mb-bar-item-wrapper"
+		[class.__mb-item-hovered]="hoveredValue !== null"
+		*ngFor="let separation of (separations | numToArray)"
+		(mouseleave)="onHoverItem(null, null)"
+	>
+
+		<div class="__mb-bar-item">
+
+				<div
+					*ngFor="let gap of (gapsPerSeparation | numToArray)"
+					class="__mb-bar-item-value"
+					[class.__mb-active]="value | insidePercentage:separations:separation:gapsPerSeparation:gap"
+					[class.__mb-hovered]="hoveredValue | insidePercentage:separations:separation:gapsPerSeparation:gap"
+					(mouseenter)="onHoverItem(separation, gap)"
+					(click)="onClickItem(separation, gap)"
+				>
+				</div>
+
+		</div>
+
+	</div>
+
+</div>

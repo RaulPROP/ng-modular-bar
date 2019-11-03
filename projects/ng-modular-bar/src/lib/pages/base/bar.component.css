@@ -1,0 +1,53 @@
+.__mb-bar-wrapper {
+	position: relative;
+
+	width: 100%;
+	height: var(--mb-bar-height);
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	overflow: hidden;
+}
+
+.__mb-bar-wrapper > .__mb-bar-item-wrapper {
+	flex: 1 1 0px;
+	height: 100%;
+
+	overflow: hidden;
+}
+
+.__mb-bar-wrapper > .__mb-bar-item-wrapper:first-child {
+	border-radius: calc(var(--mb-bar-height) / 2) 0 0 calc(var(--mb-bar-height) / 2);
+}
+
+.__mb-bar-wrapper > .__mb-bar-item-wrapper:last-child {
+	border-radius: 0 calc(var(--mb-bar-height) / 2) calc(var(--mb-bar-height) / 2) 0;
+
+	--mb-gap: 0px;
+}
+
+.__mb-bar-wrapper > .__mb-bar-item-wrapper > .__mb-bar-item {
+	width: calc(100% - var(--mb-gap));
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.__mb-bar-wrapper > .__mb-bar-item-wrapper > .__mb-bar-item > .__mb-bar-item-value {
+	flex: 1 1 0px;
+	height: 100%;
+
+	background-color: var(--mb-bar-bg-idle);
+}
+
+.__mb-bar-wrapper.__mb-can-hover > .__mb-bar-item-wrapper:not(.__mb-item-hovered) > .__mb-bar-item > .__mb-bar-item-value.__mb-active {
+	background-color: var(--mb-bar-bg-active);
+}
+
+.__mb-bar-wrapper.__mb-can-hover > .__mb-bar-item-wrapper > .__mb-bar-item > .__mb-bar-item-value.__mb-hovered {
+	background-color: var(--mb-bar-bg-hovered);
+}

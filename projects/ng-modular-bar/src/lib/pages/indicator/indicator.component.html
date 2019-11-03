@@ -1,0 +1,20 @@
+<div class="__mb-indicator-wrapper">
+
+	<div class="__mb-indicator"
+		[style.left.%]="value * 100"
+		[class.__mb-disabled]="!canBeModified"
+		modularBarIndicator
+		[value]="value"
+		[minValue]="minValue"
+		[maxValue]="maxValue"
+		[editable]="canBeModified"
+		[tick]="ticks"
+		(newValue)="onNewValue($event)"
+	>
+
+		<div class="__mb-label">
+			{{label}}
+		</div>
+	</div>
+
+</div>

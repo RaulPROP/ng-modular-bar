@@ -1,0 +1,90 @@
+.__mb-wrapper {
+	position: relative;
+
+	width: 100%;
+	height: 100%;
+
+	/* COMMON */
+
+	--mb-bar-height: 10px;
+	--mb-gap: 1px;
+
+	/* BAR */
+
+	--mb-bar-bg-idle: gray;
+	--mb-bar-bg-active: blue;
+	--mb-bar-bg-hovered: lightblue;
+
+	/* INDICATOR */
+
+	--mb-indicator-size-idle: calc(var(--mb-bar-height) * 2);
+	--mb-indicator-border-size-idle: 1px;
+	--mb-indicator-bg-idle: white;
+	--mb-indicator-border-idle: blue;
+	--mb-indicator-cursor-idle: grab;
+	--mb-indicator-shadow-idle: 0 0 2px -1px black;
+
+	--mb-indicator-size-hover: calc(var(--mb-bar-height) * 2);
+	--mb-indicator-bg-hover: #d0d0d0;
+	--mb-indicator-border-hover: rgb(20, 20, 189);
+	--mb-indicator-border-size-hover: 1px;
+	--mb-indicator-cursor-hover: grab;
+	--mb-indicator-shadow-hover: 0 0 2px -1px black;
+
+	--mb-indicator-size-active: calc(var(--mb-bar-height) * 2);
+	--mb-indicator-bg-active: blue;
+	--mb-indicator-border-active: white;
+	--mb-indicator-border-size-active: 1px;
+	--mb-indicator-cursor-active: grabbing;
+	--mb-indicator-shadow-active: 0 0 2px -1px black;
+
+	--mb-indicator-size-disabled: calc(var(--mb-bar-height) * 2);
+	--mb-indicator-bg-disabled: gray;
+	--mb-indicator-border-disabled: gray;
+	--mb-indicator-border-size-disabled: 1px;
+	--mb-indicator-cursor-disabled: not-allowed;
+	--mb-indicator-shadow-disabled: 0 0 2px -1px black;
+
+	/* LABEL */
+
+	--mb-label-size-idle: 1rem;
+	--mb-label-weight-idle: 400;
+	--mb-label-color-idle: black;
+	--mb-label-gap-idle: 0px;
+
+	--mb-label-size-hover: 1rem;
+	--mb-label-weight-hover: 400;
+	--mb-label-color-hover: black;
+	--mb-label-gap-hover: 0px;
+
+	--mb-label-size-active: 1rem;
+	--mb-label-weight-active: 400;
+	--mb-label-color-active: black;
+	--mb-label-gap-active: 0px;
+
+	--mb-label-size-disabled: 1rem;
+	--mb-label-weight-disabled: 400;
+	--mb-label-color-disabled: black;
+	--mb-label-gap-disabled: 0px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.__mb-wrapper > .__mb-bar-container {
+	width: 100%;
+	height: var(--mb-bar-height);
+}
+
+.__mb-wrapper > .__mb-indicator-container {
+	width: 100%;
+	height: var(--mb-bar-height);
+
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+
+	pointer-events: none;
+}

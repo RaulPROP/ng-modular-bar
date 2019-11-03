@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter, Input, OnInit, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
 @Component({
-	selector: 'modular-bar-indicator',
+	selector: 'lib-modular-bar-indicator',
 	templateUrl: './indicator.component.html',
 	styleUrls: ['./indicator.component.css'],
 	changeDetection: ChangeDetectionStrategy.OnPush,

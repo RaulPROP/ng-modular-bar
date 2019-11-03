@@ -1,9 +1,9 @@
 import { Component, Input, ChangeDetectionStrategy, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
-	selector: 'modular-bar-base',
-	templateUrl: './bar.component.html',
-	styleUrls: ['./bar.component.css'],
+	selector: 'lib-modular-bar-base',
+	templateUrl: './base.component.html',
+	styleUrls: ['./base.component.css'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	encapsulation: ViewEncapsulation.None,
 })

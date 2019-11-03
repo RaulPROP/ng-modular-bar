@@ -1,6 +1,6 @@
 <div class="__mb-wrapper">
 
-	<modular-bar-base
+	<lib-modular-bar-base
 		class="__mb-bar-container"
 		[separations]="separations"
 		[value]="value"
@@ -9,10 +9,10 @@
 		[gapsPerSeparation]="((maxValue - minValue) * ticks) / separations"
 		(valueHover)="onValueHover($event)"
 		(valueClick)="onValueClick($event)"
-	>
-	</modular-bar-base>
+		>
+	</lib-modular-bar-base>
 
-	<modular-bar-indicator
+	<lib-modular-bar-indicator
 		class="__mb-indicator-container"
 		[maxValue]="maxValue"
 		[minValue]="minValue"
@@ -22,6 +22,6 @@
 		[canBeModified]="canBeModified"
 		(onNewValue)="onNewValue($event)"
 	>
-	</modular-bar-indicator>
+	</lib-modular-bar-indicator>
 
 </div>

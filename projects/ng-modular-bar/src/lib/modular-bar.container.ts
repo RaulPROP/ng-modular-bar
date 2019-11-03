@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
 
 @Component({
-	selector: 'app-modular-bar',
+	selector: 'lib-modular-bar',
 	templateUrl: './modular-bar.container.html',
 	styleUrls: ['./modular-bar.container.css'],
 	encapsulation: ViewEncapsulation.None,

@@ -3,7 +3,7 @@ import { fromEvent, Subscription, BehaviorSubject, Observable, Subject } from 'r
 import { takeUntil, mergeMap, tap, finalize } from 'rxjs/operators';
 
 @Directive({
-	selector: '[modularBarIndicator]'
+	selector: '[libModularBarIndicator]'
 })
 export class IndicatorDirective implements OnInit, OnDestroy, OnChanges {
 	private ngUnsubscribe: Subject<void> = new Subject<void>();

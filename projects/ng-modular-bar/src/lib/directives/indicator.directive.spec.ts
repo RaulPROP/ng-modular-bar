@@ -9,10 +9,9 @@ import { By } from '@angular/platform-browser';
 
 		<div class="__mb-indicator-wrapper">
 
-			<div class="__mb-indicator" modularBarIndicator [value]="value"></div>
+			<div class="__mb-indicator" libModularBarIndicator [value]="value"></div>
 
 		</div>
-
 
 	</div>
 	`,
@@ -34,7 +33,7 @@ class TestComponent {
 }
 
 @Component({
-	template: '<div modularBarIndicator class="indicator"></div>'
+	template: '<div libModularBarIndicator class="indicator"></div>'
 })
 class BadTestComponent {}
 

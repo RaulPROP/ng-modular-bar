@@ -13,8 +13,8 @@
 		"report-coverage:lib": "cat ./coverage/ng-modular-bar/lcov.info | codecov",
 		"build": "npm run build:lib && npm run build:demo",
 		"build:lib": "npm run copy:readme && ng build ng-modular-bar",
-		"build:showcase": "ng build ng-modular-bar --base-href='https://raulPROP.github.io/ng-modular-bar/'",
-		"publish:demo": "npx angular-cli-ghpages --dir=./dist/ng-modular-bar",
+		"build:showcase": "ng build ng-modular-bar --base-href='https://raulPROP.gitlab.io/ng-modular-bar/'",
+		"publish:demo": "npx angular-cli-ghpages --dir=./dist/ng-modular-bar-showcase",
 		"copy:readme": "copyfiles ./README.md ./dist/ng-modular-bar",
 		"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 	},

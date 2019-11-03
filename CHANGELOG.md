@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/raulPROP/ng-modular-bar/compare/v1.0.0...v1.0.1) (2019-11-03)
+
+
+### Bug Fixes
+
+* **ci:** removed gitlab from semantic-release ([4c5cbac](https://github.com/raulPROP/ng-modular-bar/commit/4c5cbac4548cc435c0198175d8e413c20ee6f254))
+
 # 1.0.0 (2019-11-03)
 
 

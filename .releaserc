@@ -9,7 +9,6 @@
 			"assets": ["package.json", "projects/ng-modular-bar/package.json", "CHANGELOG.md"],
 			"message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
 		}],
-		"@semantic-release/github",
-		"@semantic-release/gitlab"
+		"@semantic-release/github"
 	]
 }

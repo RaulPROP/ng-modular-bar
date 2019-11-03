@@ -10,7 +10,7 @@ pages:
   - npm install -g @angular/cli@6.2.1
   - npm install
   - ng build
-  - mv dist/fossilizer/* public/
+  - mv dist/ng-modular-bar/* public/
   artifacts:
     paths:
     - public

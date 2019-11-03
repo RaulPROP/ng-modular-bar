@@ -4,19 +4,28 @@
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
+
 		"format:check": "prettier --list-different 'projects/**/*.ts'",
 		"format:write": "prettier --write 'projects/**/*.ts'",
+
 		"test": "ng test",
 		"lint": "ng lint",
 		"e2e": "ng e2e",
 		"test:lib-coverage": "ng test ng-modular-bar --code-coverage --watch=false",
 		"report-coverage:lib": "cat ./coverage/ng-modular-bar/lcov.info | codecov",
+
 		"build": "npm run build:lib && npm run build:demo",
 		"build:lib": "npm run copy:readme && ng build ng-modular-bar",
 		"build:showcase": "ng build ng-modular-bar --base-href='https://raulPROP.gitlab.io/ng-modular-bar/'",
+
 		"publish:demo": "npx angular-cli-ghpages --dir=./dist/ng-modular-bar-showcase",
+
 		"copy:readme": "copyfiles ./README.md ./dist/ng-modular-bar",
-		"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+
+		"adjust-version": "npm-run-all adjust-version:*",
+		"adjust-version:lib": "rjp projects/ng-simple-alert/package.json version $VERSION",
+		"adjust-version:main": "rjp package.json version $VERSION"
 	},
 	"private": true,
 	"dependencies": {
@@ -42,6 +51,7 @@
 		"@commitlint/config-conventional": "^8.2.0",
 		"@commitlint/prompt": "^8.2.0",
 		"@semantic-release/exec": "^3.3.8",
+		"@semantic-release/gitlab": "^4.0.3",
 		"@types/jasmine": "~3.3.8",
 		"@types/jasminewd2": "~2.0.3",
 		"@types/node": "~8.9.4",

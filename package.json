@@ -1,32 +1,31 @@
 {
 	"name": "ng-modular-bar",
 	"version": "0.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/raulPROP/ng-modular-bar.git"
+	},
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
-
 		"format:check": "prettier --list-different 'projects/**/*.ts'",
 		"format:write": "prettier --write 'projects/**/*.ts'",
-
 		"test": "ng test",
 		"lint": "ng lint",
 		"e2e": "ng e2e",
 		"test:lib-coverage": "ng test ng-modular-bar --code-coverage --watch=false",
 		"report-coverage:lib": "cat ./coverage/ng-modular-bar/lcov.info | codecov",
-
 		"build": "npm run build:lib && npm run build:demo",
 		"build:lib": "npm run copy:readme && ng build ng-modular-bar",
 		"build:demo": "ng build ng-modular-bar-showcase --base-href='https://raulPROP.github.io/ng-modular-bar/'",
-
 		"publish:demo": "npx angular-cli-ghpages --dir=./dist/ng-modular-bar-showcase",
-		"publish:lib": "npx angular-cli-ghpages --dir=./dist/ng-modular-bar",
-
+		"publish:lib": "npx semantic-release",
 		"copy:readme": "copyfiles ./README.md ./dist/ng-modular-bar",
 		"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-
 		"adjust-version": "npm-run-all adjust-version:*",
 		"adjust-version:lib": "rjp projects/ng-simple-alert/package.json version $VERSION",
-		"adjust-version:main": "rjp package.json version $VERSION"
+		"adjust-version:main": "rjp package.json version $VERSION",
+		"semantic-release": "semantic-release"
 	},
 	"private": true,
 	"dependencies": {
@@ -51,7 +50,9 @@
 		"@commitlint/cli": "^8.2.0",
 		"@commitlint/config-conventional": "^8.2.0",
 		"@commitlint/prompt": "^8.2.0",
+		"@semantic-release/changelog": "^3.0.5",
 		"@semantic-release/exec": "^3.3.8",
+		"@semantic-release/git": "^7.0.17",
 		"@semantic-release/gitlab": "^4.0.3",
 		"@types/jasmine": "~3.3.8",
 		"@types/jasminewd2": "~2.0.3",
@@ -71,6 +72,7 @@
 		"ng-packagr": "^5.4.0",
 		"prettier": "^1.18.2",
 		"protractor": "~5.4.0",
+		"semantic-release": "^15.13.30",
 		"semantic-release-cli": "^5.2.2",
 		"ts-node": "~7.0.0",
 		"tsickle": "^0.37.0",

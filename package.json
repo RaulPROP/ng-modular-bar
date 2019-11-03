@@ -19,6 +19,7 @@
 		"build:demo": "ng build ng-modular-bar-showcase --base-href='https://raulPROP.github.io/ng-modular-bar/'",
 
 		"publish:demo": "npx angular-cli-ghpages --dir=./dist/ng-modular-bar-showcase",
+		"publish:lib": "npx angular-cli-ghpages --dir=./dist/ng-modular-bar",
 
 		"copy:readme": "copyfiles ./README.md ./dist/ng-modular-bar",
 		"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",

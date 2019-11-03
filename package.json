@@ -16,7 +16,7 @@
 
 		"build": "npm run build:lib && npm run build:demo",
 		"build:lib": "npm run copy:readme && ng build ng-modular-bar",
-		"build:showcase": "ng build ng-modular-bar --base-href='https://raulPROP.github.io/ng-modular-bar/'",
+		"build:demo": "ng build ng-modular-bar-showcase --base-href='https://raulPROP.github.io/ng-modular-bar/'",
 
 		"publish:demo": "npx angular-cli-ghpages --dir=./dist/ng-modular-bar-showcase",
 
